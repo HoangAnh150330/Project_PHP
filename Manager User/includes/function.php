@@ -4,3 +4,9 @@
 if(!defined('_CODE')){
     die('Access denied....');
 }
+
+function layouts($layoutName='header'){
+    if(file_exists(_WEB_PATH_TEMPLATES.'/Layout/'.$layoutName.'.php')){
+        require_once _WEB_PATH_TEMPLATES.'/Layout/'.$layoutName.'.php';
+    }
+}
