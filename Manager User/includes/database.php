@@ -11,7 +11,7 @@ function query($sql,$data=[]){
     try{
         $statement= $conn ->prepare($sql);
         if(!empty($data)){
-            $statement ->execute($data);
+            $ketqua=$statement ->execute($data);
         }
         else{
             $ketqua=$statement ->execute();
@@ -34,6 +34,24 @@ function insert($table,$data){
     //tạo câu lệnh sql
     $sql='Insert Into '.$table.'('.$truong.')'.'Values('.$valuetb.')';
 
+    $kq=query($sql,$data);
+    return $kq;
+}
+
+//Hàm update
+function update($table,$data,$condition=''){
+    $update='';
+    foreach($data as $key => $value){
+        $update .= $key.'= :'.$key.',';
+    }
+    $update=trim($update,',');
+
+    if(!empty($condition)){
+        $sql=' update '.$table .' Set '.$update.' where '.$condition .';';
+    }
+    else{
+        $sql='update'.$table .'Set '.$update;
+    }
     $kq=query($sql,$data);
     return $kq;
 }

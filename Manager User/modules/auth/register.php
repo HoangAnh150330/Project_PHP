@@ -8,12 +8,13 @@ $data=[
     'pageTitle' =>'Đăng ký tài khoản'
 ];
 $data2=[
-    'fullname' =>'Hùng',
-    'email' =>'hungngoc2002@gmail.com',
-    'phone' =>'01010101',
+    'fullname' =>'Toàn',
+    'email' =>'toanngoc2002@gmail.com',
+    'phone' =>'12312311',
 
 ];
-insert('user',$data2);
+$kq=update('user',$data2,' id = 2');
+var_dump($kq);
 layouts('header',$data);
 
 ?>
