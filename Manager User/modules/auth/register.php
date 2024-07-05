@@ -7,6 +7,13 @@ if(!defined('_CODE')){
 $data=[
     'pageTitle' =>'Đăng ký tài khoản'
 ];
+$data2=[
+    'fullname' =>'Hùng',
+    'email' =>'hungngoc2002@gmail.com',
+    'phone' =>'01010101',
+
+];
+insert('user',$data2);
 layouts('header',$data);
 
 ?>

@@ -1,9 +1,10 @@
 <?php
 
 session_start();
-require_once 'config.php';
-require_once './includes/function.php';
-echo '<i class="fa-solid fa-house"></i>';
+require_once ('config.php');
+require_once ('./includes/connect.php');
+require_once ('./includes/function.php');
+require_once ('./includes/database.php');
 $module =_MODULE;
 $action=_ACTION;
 

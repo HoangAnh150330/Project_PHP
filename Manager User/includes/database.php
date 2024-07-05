@@ -26,3 +26,14 @@ function query($sql,$data=[]){
     return $ketqua;
 
 }
+//Hàm insert
+function insert($table,$data){
+    $key=array_keys($data);
+    $truong= implode(',',$key);  
+    $valuetb= ':'.implode(',:',$key);
+    //tạo câu lệnh sql
+    $sql='Insert Into '.$table.'('.$truong.')'.'Values('.$valuetb.')';
+
+    $kq=query($sql,$data);
+    return $kq;
+}

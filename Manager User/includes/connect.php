@@ -4,7 +4,6 @@
 if(!defined('_CODE')){
     die('Access denied....');
 }
-require_once "./Manager User/config.php";
 
 try{
     if(class_exists('PDO')){
