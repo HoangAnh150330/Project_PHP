@@ -4,7 +4,10 @@
 if(!defined('_CODE')){
     die('Access denied....');
 }
-layouts('header');
+$data=[
+    'pageTitle' =>'Đăng nhập tài khoản'
+];
+layouts('header',$data);
 
 ?>
 <div class="row">
