@@ -13,7 +13,10 @@ $data2=[
     'phone' =>'12312311',
 
 ];
-$kq=update('user',$data2,' id = 2');
+$kq =getRows('Select * From user');
+echo '<pre>';
+print_r($kq);
+echo '</pre>';
 var_dump($kq);
 layouts('header',$data);
 
