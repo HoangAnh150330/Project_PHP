@@ -12,3 +12,10 @@ define('_WEB_HOST_TEMPLATES',_WEB_HOST.'/tempates');
 define('_WEB_PATH',__DIR__);
 
 define('_WEB_PATH_TEMPLATES',_WEB_PATH.'/tempates');
+
+
+//thông tin kết nối
+const _HOST='localhost';
+const _DB='bd_hienu';
+const _USER='root';
+const _PASS='';
